@@ -8,7 +8,7 @@ package app
 
 // Injectors from wire.go:
 
-func InitApps() *Apps {
-	apps := NewApps()
-	return apps
+func InitApps() *apps {
+	appApps := newApps()
+	return appApps
 }

@@ -7,6 +7,6 @@ import (
 	"github.com/google/wire"
 )
 
-func InitApps() *Apps {
-	panic(wire.Build(NewApps))
+func InitApps() *apps {
+	panic(wire.Build(newApps))
 }
