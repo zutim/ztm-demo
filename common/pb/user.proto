@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+package proto;
+option go_package = "/user";
+
+message UserCreateReq {
+  string name = 1;
+  int32 age = 2;
+}
+
+
+message UserCreateRes {
+  string name = 1;
+  int32 age = 2;
+  int32 id = 3;
+}
+
+message UserGetReq {
+  int32 id = 1;
+}
+
+message UserGetRes {
+  string name = 2;
+  int32 age = 3;
+  int32 id = 4;
+}
+
+
+
+service User {
+  rpc Create(UserCreateReq) returns (UserCreateRes);
+  rpc Get(UserGetReq) returns (UserGetRes);
+}

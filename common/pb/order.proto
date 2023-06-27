@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+package proto;
+option go_package = "/order";
+
+message OrderCreateReq {
+  string name = 1;
+  int32 age = 2;
+}
+
+
+message OrderCreateRes {
+  string name = 1;
+  int32 age = 2;
+  int32 id = 3;
+}
+
+message OrderGetReq {
+  int32 id = 1;
+}
+
+message OrderGetRes {
+  string name = 2;
+  int32 age = 3;
+  int32 id = 4;
+}
+
+
+
+service Order {
+  rpc Create(OrderCreateReq) returns (OrderCreateRes);
+  rpc Get(OrderGetReq) returns (OrderCreateRes);
+}

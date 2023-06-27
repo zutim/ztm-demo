@@ -10,4 +10,9 @@ linuxbuild:
 	upx  bin/app
 
 
+#protoc
+generate:
+	protoc --go_out=common/pb --go-grpc_out=common/pb common/pb/*.proto
+
+
 
