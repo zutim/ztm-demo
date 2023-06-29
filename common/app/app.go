@@ -1,16 +1,17 @@
 package app
 
 import (
+	"github.com/zutim/mongo"
 	"github.com/zutim/pool"
 	"go.uber.org/zap"
 	"gorm.io/gorm"
 )
 
 type apps struct {
-	Log  map[string]*zap.SugaredLogger
-	Pool *pool.ScalableGroutinePool
-	Db   *gorm.DB
-	//MongoDb *mongo.MongoClient
+	Log     map[string]*zap.SugaredLogger
+	Pool    *pool.ScalableGroutinePool
+	Db      *gorm.DB
+	MongoDb *mongo.MongoClient
 }
 
 var (

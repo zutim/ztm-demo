@@ -28,3 +28,19 @@ func (h *handler) OrderCreate(ctx *gin.Context) {
 	}
 	resp.SuccessResponse(ctx, res)
 }
+
+func (h *handler) OrderCreate2(ctx *gin.Context) {
+
+}
+
+func (h *handler) OrderCreate3(ctx *gin.Context) {
+
+}
+
+func (h *handler) OrderCreate4(ctx *gin.Context) {
+
+}
+
+func (h *handler) OrderCreate5(ctx *gin.Context) {
+
+}

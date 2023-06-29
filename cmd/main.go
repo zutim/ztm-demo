@@ -2,10 +2,13 @@ package main
 
 import (
 	flag "github.com/spf13/pflag"
+	"github.com/spf13/viper"
 	conf "github.com/zutim/config"
+	"github.com/zutim/grpc"
+	"github.com/zutim/http"
 	ztm_demo "github.com/zutim/ztm-demo"
 	"github.com/zutim/ztm-demo/common/app"
-	"github.com/zutim/ztm-demo/network/server"
+	"github.com/zutim/ztm-demo/network/ngin/router"
 )
 
 var (
@@ -31,8 +34,7 @@ func main() {
 
 func run() {
 
-	//go server.NewGrpc().Register().Run()
+	go grpc.NewGrpc().Register(router.GetRpcRouter()).Run(viper.GetString("rpc"))
 
-	server.NewHttp().Run()
-
+	http.NewHttp().Register(router.GetRouter()).Run(viper.GetString("http"))
 }

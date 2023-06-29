@@ -9,11 +9,13 @@ require (
 	github.com/spf13/viper v1.16.0
 	github.com/zutim/config v1.0.2
 	github.com/zutim/gorm v1.0.0
+	github.com/zutim/grpc v1.0.0
+	github.com/zutim/http v1.0.0
 	github.com/zutim/log v1.0.1
-	github.com/zutim/mongo v1.0.0
+	github.com/zutim/mongo v1.0.1
 	github.com/zutim/pool v1.0.1
 	go.uber.org/zap v1.24.0
-	google.golang.org/grpc v1.55.0
+	google.golang.org/grpc v1.56.1
 	google.golang.org/protobuf v1.30.0
 	gorm.io/gorm v1.25.1
 )
