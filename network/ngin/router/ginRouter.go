@@ -43,5 +43,12 @@ func GetRouter() func(r *gin.Engine) {
 			http.RegisterRouteGroup(r, group)
 		}
 	}
+}
 
+func GetRouter2() func(r *gin.Engine) {
+	hand := handler.NewHandler()
+	return func(r *gin.Engine) {
+		r2 := r.Group("test").Use(middleWare.Cors())
+		r2.POST("order/create", hand.OrderCreate)
+	}
 }
